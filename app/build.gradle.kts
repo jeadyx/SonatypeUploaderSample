@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.jeady.mavenTest"
-        minSdk = 29
+        minSdk = 33
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -50,7 +50,7 @@ android {
 }
 
 dependencies {
-    implementation("io.github.jeady5:test-library:1.0")
+//    implementation("io.github.jeady5:test-library:1.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
