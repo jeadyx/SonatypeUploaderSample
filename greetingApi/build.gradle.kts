@@ -1,12 +1,12 @@
 plugins {
     id("java-library")
     alias(libs.plugins.jetbrains.kotlin.jvm)
-    id("io.github.jeadyx.sonatype-uploader") version "2.0"
     id("org.jetbrains.dokka") version "1.9.20"
+    id("io.github.jeadyx.sonatype-uploader") version "2.3"
 }
 
 group = "io.github.jeady5"
-version = "1.0"
+version = "1.4"
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17

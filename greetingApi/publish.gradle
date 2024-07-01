@@ -1,10 +1,8 @@
-apply plugin: "io.github.jeadyx.sonatype-uploader"
-
 sonatypeUploader {
     tokenName = tokenUser
     tokenPasswd = tokenUserPasswd
     pom = {
-        it.name = "My123 Library"
+        it.name = "My Library"
         it.description = "A concise description of my library greennbg"
         it.url = "http://www.example111.com/library"
         it.licenses {
