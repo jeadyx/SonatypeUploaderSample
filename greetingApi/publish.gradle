@@ -1,6 +1,11 @@
 sonatypeUploader {
     tokenName = tokenUser
     tokenPasswd = tokenUserPasswd
+//    signing = {
+//        it.keyId = "9EAFF062"
+//        it.keyPasswd = "123123"
+//        it.secretKeyPath = "E:\\test_0x9EAFF062_SECRET.gpg"
+//    }
     pom = {
         it.name = "My Library"
         it.description = "A concise description of my library greennbg"
