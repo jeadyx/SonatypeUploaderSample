@@ -1,33 +1,39 @@
-import io.github.jeadyx.UploaderSigning
+//import io.github.jeadyx.UploaderSigning
 
 plugins {
     id("java-library")
     alias(libs.plugins.jetbrains.kotlin.jvm)
+//    `maven-publish`
+//    signing
     id("org.jetbrains.dokka") version "1.9.20"
-    id("io.github.jeadyx.sonatype-uploader") version "2.4"
+    id("io.github.jeadyx.sonatype-uploader") version "2.5"
 }
 
 group = "io.github.jeady5"
-version = "1.4"
+version = "1.5"
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
 }
+
 //apply{ from("publish.gradle") }
 val tokenUser: String by project
 val tokenUserPasswd: String by project
 sonatypeUploader {
+//    repositoryPath = project.layout.buildDirectory.dir("repo").get().asFile.path
+//    repositoryPath = project.layout.projectDirectory.dir("repo").asFile.path
+    repositoryPath = "E:\\repo"
     tokenName = tokenUser
     tokenPasswd = tokenUserPasswd
-    signing = Action<UploaderSigning> {
-        keyId="9EAFF062"
-        keyPasswd="123123"
-        secretKeyPath="E:\\test_0x9EAFF062_SECRET.gpg"
-    }
+//    signing = Action<UploaderSigning> {
+//        keyId="9EAFF062"
+//        keyPasswd="123123"
+//        secretKeyPath="E:\\test_0x9EAFF062_SECRET.gpg"
+//    }
     pom = Action<MavenPom>{
         name = "My Library"
         description = "A concise description of my library greennbg"
-        url = "http://www.example111.com/library"
+        url = "http://www.example.com/library"
         licenses {
             license {
                 name = "The Apache License, Version 2.0"
