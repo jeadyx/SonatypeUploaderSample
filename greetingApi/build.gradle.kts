@@ -6,11 +6,11 @@ plugins {
 //    `maven-publish`
 //    signing
     id("org.jetbrains.dokka") version "1.9.20"
-    id("io.github.jeadyx.sonatype-uploader") version "2.5"
+    id("io.github.jeadyx.sonatype-uploader") version "2.6"
 }
 
 group = "io.github.jeady5"
-version = "1.5"
+version = "1.6"
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
@@ -22,13 +22,13 @@ val tokenUserPasswd: String by project
 sonatypeUploader {
 //    repositoryPath = project.layout.buildDirectory.dir("repo").get().asFile.path
 //    repositoryPath = project.layout.projectDirectory.dir("repo").asFile.path
-    repositoryPath = "E:\\repo"
+//    repositoryPath = "E:\\repo"
     tokenName = tokenUser
     tokenPasswd = tokenUserPasswd
 //    signing = Action<UploaderSigning> {
-//        keyId="9EAFF062"
-//        keyPasswd="123123"
-//        secretKeyPath="E:\\test_0x9EAFF062_SECRET.gpg"
+//        keyId="F56168C8"
+//        keyPasswd=""
+//        secretKeyPath="E:\\wjd\\gpg\\jeady_0xF56168C8_SECRET.gpg"
 //    }
     pom = Action<MavenPom>{
         name = "My Library"
