@@ -6,11 +6,11 @@ plugins {
 //    `maven-publish`
 //    signing
     id("org.jetbrains.dokka") version "1.9.20"
-    id("io.github.jeadyx.sonatype-uploader") version "2.6"
+    id("io.github.jeadyx.sonatype-uploader") version "2.7"
 }
 
 group = "io.github.jeady5"
-version = "1.6"
+version = "1.7"
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
